@@ -110,7 +110,7 @@ qdrant_storage/
 # Ollama / local model data
 # ------------------------------------------------------------
 ollama/
-models/
+/models/
 
 # ------------------------------------------------------------
 # Temporary files
