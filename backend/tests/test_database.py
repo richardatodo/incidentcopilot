@@ -1,8 +1,8 @@
+
 from sqlalchemy import text
 
-from backend.app.core.database import engine
 from backend.app.models.base import Base
-from backend.app.models import (
+from backend.app.models import (  # noqa: F401
     Diagnosis,
     Evidence,
     Incident,
@@ -12,8 +12,8 @@ from backend.app.models import (
 )
 
 
-def test_database_connection():
-    with engine.connect() as connection:
+def test_database_connection(test_engine):
+    with test_engine.connect() as connection:
         result = connection.execute(text("SELECT 1")).scalar_one()
 
     assert result == 1
