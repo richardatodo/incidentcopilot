@@ -6,6 +6,7 @@
 # Environment & Secrets
 # ------------------------------------------------------------
 .env
+.env.docker
 .env.local
 .env.*.local
 
